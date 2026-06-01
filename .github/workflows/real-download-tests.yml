@@ -33,7 +33,6 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
           uv sync --group dev
-          .venv/bin/pip install huggingface_hub safetensors
 
       - name: Run real download tests
         run: |
@@ -43,4 +42,5 @@ jobs:
             tests/test_ch07.py \
             tests/test_ch08.py \
             tests/test_appendix_d.py \
+            tests/test_qwen3.py \
             -k real_download
